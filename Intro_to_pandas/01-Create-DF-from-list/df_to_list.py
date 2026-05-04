@@ -7,9 +7,6 @@ data = [
   [4, 20]
 ]
 
-df = pd.DataFrame(data, columns=["student ID", "age"])
-
 def create_dataframe(student_data: List[List[int]]) -> pd.DataFrame:
-    pass
-
-
+    df = pd.DataFrame(student_data, columns=["student ID", "age"])
+    return df
