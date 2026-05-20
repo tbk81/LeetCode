@@ -21,7 +21,22 @@ Output: [8,9,9,9,0,0,0,1]
 
 
 class Solution(object):
+    def revers_li(self, li):
+        num = ""
+        for i in li[::-1]:
+            num += ''.join(str(i))
+        return int(num)
+
     def add_two_numbers(self, l1, l2):
+        l3 = []
+        num1 = reverse_li(l1)
+        num2 = reverse_li(l2)
+
+        total = int(n1) + int(n2)
+        string_total = str(total)
+
+        return [l3.append(int(i)) for i in string_total]
+
         """
         :type l1: Optional[ListNode]
         :type l2: Optional[ListNode]
@@ -29,25 +44,25 @@ class Solution(object):
         """
 
 
-l1 = [2, 4, 3]
-l2 = [5, 6, 4]
-l3 = []
-n1 = ""
-n2 = ""
+li1 = [2, 4, 3]
+li2 = [5, 6, 4]
+# l3 = []
+# n1 = ""
+# n2 = ""
+#
+# for i in l1[::-1]:
+#     n1 += ''.join(str(i))
+#
+# for i in l2[::-1]:
+#     n2 += ''.join(str(i))
+#
+# total = int(n1) + int(n2)
+# string_total = str(total)
+#
+# [l3.append(int(i)) for i in string_total]
+# print(l3)
 
-for i in l1[::-1]:
-    n1 += ''.join(str(i))
-
-for i in l2[::-1]:
-    n2 += ''.join(str(i))
-
-total = int(n1) + int(n2)
-string_total = str(total)
-
-[l3.append(int(i)) for i in string_total]
-print(l3)
-
-
+print(Solution().add_two_numbers(li1, li2))
 
 
 
