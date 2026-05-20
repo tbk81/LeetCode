@@ -31,6 +31,7 @@ class Solution(object):
 
 l1 = [2, 4, 3]
 l2 = [5, 6, 4]
+l3 = []
 n1 = ""
 n2 = ""
 
@@ -41,11 +42,10 @@ for i in l2[::-1]:
     n2 += ''.join(str(i))
 
 total = int(n1) + int(n2)
-str(total)
-print(type(total))
-# for i in total[::-1]:
-#     l3.append(i)
-# print(l3)
+string_total = str(total)
+
+[l3.append(int(i)) for i in string_total]
+print(l3)
 
 
 
