@@ -65,9 +65,40 @@ li2 = [5, 6, 4]
 print(Solution().add_two_numbers(li1, li2))
 
 
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 
-
-
+# class Solution(object):
+#     def addTwoNumbers(self, l1, l2):
+#         # Create a dummy node to act as the starting point of our new list
+#         dummy_head = ListNode(0)
+#         current = dummy_head
+#         carry = 0
+#
+#         # Loop as long as there are nodes in l1, l2, or a leftover carry
+#         while l1 is not None or l2 is not None or carry != 0:
+#             # Get the values from the current nodes (use 0 if the node is empty)
+#             val1 = l1.val if l1 else 0
+#             val2 = l2.val if l2 else 0
+#
+#             # Calculate the total and the new carry
+#             total = val1 + val2 + carry
+#             carry = total // 10  # Floor division extracts the tens digit (e.g., 15 // 10 = 1)
+#             new_digit = total % 10  # Modulo extracts the ones digit (e.g., 15 % 10 = 5)
+#
+#             # Create the new node with the single digit and attach it
+#             current.next = ListNode(new_digit)
+#             current = current.next
+#
+#             # Move l1 and l2 to their next nodes
+#             if l1: l1 = l1.next
+#             if l2: l2 = l2.next
+#
+#         # Return the next node after dummy_head, which is the actual start of our result
+#         return dummy_head.next
 
 
 
