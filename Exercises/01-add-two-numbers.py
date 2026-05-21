@@ -26,21 +26,21 @@ class Solution(object):
     :type l2: Optional[ListNode]
     :rtype: Optional[ListNode]
     """
-    def revers_li(self, li):
-        num = ""
-        for i in li[::-1]:
-            num += ''.join(str(i))
-        return int(num)
 
     def add_two_numbers(self, l1, l2):
+        num1 = ""
+        num2 = ""
         l3 = []
-        num1 = self.reverse_li(l1)
-        num2 = self.reverse_li(l2)
+
+        for i in l1[::-1]:
+            num1 += ''.join(str(i))
+        for i in l2[::-1]:
+            num2 += ''.join(str(i))
 
         total = int(num1) + int(num2)
         string_total = str(total)
 
-        return [l3.append(int(i)) for i in string_total]
+        return [int(i) for i in string_total]
 
 
 
