@@ -40,6 +40,13 @@ Hence, the minimum cost to buy all candies is 5 + 5 = 10.
 candy = [6, 5, 7, 9, 2, 2]
 sorted_candy = sorted(candy)
 print(sorted_candy)
+print((len(candy)) % 2)
+print(f'lli_len: {len(candy)}')
+li_len = len(candy)
+g1 = sorted_candy[li_len - 2:]
+g2 = sorted_candy[2:li_len - 2]
+print(g1)
+print(g2)
 
 
 
