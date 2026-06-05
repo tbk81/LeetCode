@@ -37,21 +37,32 @@ Explanation: Since there are only 2 candies, we buy both of them. There is not a
 Hence, the minimum cost to buy all candies is 5 + 5 = 10.
 """
 
+def sort_n_sum(li):
+    total_sum = 0
+    slices = []
+    for i in range(0, len(li), 3):
+        slices.append(li[i:i + 3])
+    for l in slices:
+        l.pop(0)
+        total_sum += sum(li)
+    return total_sum
+
+
 candy = [6, 5, 7, 9, 2, 2, 3]
-candy2 = [1, 2, 3]
 sorted_candy = sorted(candy)
 li_len = len(candy)
 total = 0
 if li_len % 3 != 0:
     total += sorted_candy[0]
     sorted_candy.pop(0)
-    sorted_candy_len = len(sorted_candy)
-    slices = []
-    for i in range(0, sorted_candy_len, 3):
-        slices.append(sorted_candy[i:i + 3])
-    for li in slices:
-        li.pop(0)
-        total += sum(li)
+    # sorted_candy_len = len(sorted_candy)
+    total += sort_n_sum(sorted_candy)
+    # slices = []
+    # for i in range(0, sorted_candy_len, 3):
+    #     slices.append(sorted_candy[i:i + 3])
+    # for li in slices:
+    #     li.pop(0)
+    #     total += sum(li)
 
 print(total)
 
