@@ -42,9 +42,10 @@ def sort_n_sum(li):
     slices = []
     for i in range(0, len(li), 3):
         slices.append(li[i:i + 3])
+    print(slices)
     for l in slices:
         l.pop(0)
-        total_sum += sum(li)
+        total_sum += sum(l)
     return total_sum
 
 
@@ -55,7 +56,7 @@ total = 0
 if li_len % 3 != 0:
     total += sorted_candy[0]
     sorted_candy.pop(0)
-    # sorted_candy_len = len(sorted_candy)
+    sorted_candy_len = len(sorted_candy)
     total += sort_n_sum(sorted_candy)
     # slices = []
     # for i in range(0, sorted_candy_len, 3):
@@ -65,6 +66,7 @@ if li_len % 3 != 0:
     #     total += sum(li)
 
 print(total)
+# print(sort_n_sum(sorted_candy))
 
 
 # slices = []
