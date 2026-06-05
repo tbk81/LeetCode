@@ -40,25 +40,19 @@ Hence, the minimum cost to buy all candies is 5 + 5 = 10.
 candy = [6, 5, 7, 9, 2, 2, 3]
 candy2 = [1, 2, 3]
 sorted_candy = sorted(candy)
-print(sorted_candy)
-print(f'lli_len: {len(candy)}')
 li_len = len(candy)
 total = 0
 if li_len % 3 != 0:
-    print(sorted_candy)
     total += sorted_candy[0]
     sorted_candy.pop(0)
-    print(sorted_candy)
     sorted_candy_len = len(sorted_candy)
     slices = []
     for i in range(0, sorted_candy_len, 3):
         slices.append(sorted_candy[i:i + 3])
-    print(slices)
     for li in slices:
         li.pop(0)
         total += sum(li)
-print(f'g1 = {sum(slices[0])}\ng2 = {sum(slices[1])}')
-# print(f'g1 = {sum(slices[0])}')
+
 print(total)
 
 
