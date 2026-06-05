@@ -47,9 +47,10 @@ rom_num_dict = {
     "D": 500,
     "M": 1000
 }
-test_num = "V"
-
-print(rom_num_dict[test_num])
+test_num = "VII"
+li = list(test_num)
+print(li)
+# print(rom_num_dict[test_num])
 
 
 
