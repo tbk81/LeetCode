@@ -48,9 +48,14 @@ rom_num_dict = {
     "M": 1000
 }
 test_num = "VII"
+test_num2 = "XIV"
+
 li = list(test_num)
 print(li)
 # print(rom_num_dict[test_num])
+
+for n in li:
+    print(rom_num_dict[n])
 
 
 
