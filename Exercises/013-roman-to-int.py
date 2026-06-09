@@ -40,22 +40,34 @@ Explanation: M = 1000, CM = 900, XC = 90, and IV = 4.
 
 rom_num_dict = {
     "I": 1,
+    "IV": 4,
     "V": 5,
+    "IX": 9,
     "X": 10,
+    "XL": 40,
     "L": 50,
+    "XC": 90,
     "C": 100,
+    "CD": 400,
     "D": 500,
+    "CM": 900,
     "M": 1000
 }
 test_num = "VII"
 test_num2 = "XIV"
 
-li = list(test_num)
+li = list(test_num2)
 print(li)
 # print(rom_num_dict[test_num])
 
 for n in li:
-    print(rom_num_dict[n])
+    if n+1 == "V":
+        print(rom_num_dict[f'{n+(n+1)}'])
+    else:
+        print(n)
+
+    print(n)
+    # print(rom_num_dict[n])
 
 
 
