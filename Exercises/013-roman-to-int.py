@@ -65,8 +65,10 @@ print(li)
     # print(rom_num_dict[n])
 
 for l in range(len(test_num2)):
-    print(test_num2[l])
-    print(test_num2[l:l+2])
+    if test_num2[l:l+2] in rom_num_dict:
+        print(test_num2[l:l+2])
+    else:
+        print(test_num2[l])
 
 
 
