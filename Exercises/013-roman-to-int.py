@@ -60,14 +60,14 @@ li = list(test_num2)
 print(li)
 # print(rom_num_dict[test_num])
 
-for n in li:
-    if n+1 == "V":
-        print(rom_num_dict[f'{n+(n+1)}'])
-    else:
-        print(n)
-
-    print(n)
+# for n in li:
+#     print(n)
     # print(rom_num_dict[n])
+
+for l in range(len(test_num2)):
+    print(test_num2[l])
+    print(test_num2[l:l+2])
+
 
 
 
