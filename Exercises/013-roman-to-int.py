@@ -58,20 +58,23 @@ test_num2 = "XIV"
 test_num3 = "LVIII"
 test_num4 = "MCMXCIV"
 
-li = list(test_num2)
+li = list(test_num4)
 print(li)
-# print(rom_num_dict[test_num])
 
+num_li = []
 l = 0
-while l < len(test_num2):
+while l < len(test_num4):
     # Check if the next two characters form a valid combination
-    if l + 1 < len(test_num2) and test_num2[l:l+2] in rom_num_dict:
-        print(test_num2[l:l+2])
+    if l + 1 < len(test_num4) and test_num4[l:l+2] in rom_num_dict:
+        num_li.append(rom_num_dict[test_num4[l:l+2]])
+        # num_li.append(test_num2[l:l+2])
         l += 2  # Skip 2 steps forward since we consumed a pair
     else:
-        print(test_num2[l])
+        num_li.append(rom_num_dict[test_num4[l]])
+        # num_li.append(test_num2[l])
         l += 1  # Move 1 step forward for a single character
 
-
+print(num_li)
+print(sum(num_li))
 
 
