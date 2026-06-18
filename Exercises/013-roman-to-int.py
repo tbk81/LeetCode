@@ -67,11 +67,9 @@ while l < len(test_num4):
     # Check if the next two characters form a valid combination
     if l + 1 < len(test_num4) and test_num4[l:l+2] in rom_num_dict:
         num_li.append(rom_num_dict[test_num4[l:l+2]])
-        # num_li.append(test_num2[l:l+2])
         l += 2  # Skip 2 steps forward since we consumed a pair
     else:
         num_li.append(rom_num_dict[test_num4[l]])
-        # num_li.append(test_num2[l])
         l += 1  # Move 1 step forward for a single character
 
 print(num_li)
