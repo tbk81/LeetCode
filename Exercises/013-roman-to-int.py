@@ -55,8 +55,10 @@ rom_num_dict = {
 }
 test_num = "VII"
 test_num2 = "XIV"
+test_num3 = "LVIII"
+test_num4 = "MCMXCIV"
 
-li = list(test_num2)
+li = list(test_num4)
 print(li)
 # print(rom_num_dict[test_num])
 
@@ -64,11 +66,11 @@ print(li)
 #     print(n)
     # print(rom_num_dict[n])
 
-for l in range(len(test_num2)):
-    if test_num2[l:l+2] in rom_num_dict:
-        print(test_num2[l:l+2])
+for l in range(len(test_num4)):
+    if test_num4[l:l+2] in rom_num_dict:
+        print(test_num4[l:l+2])
     else:
-        print(test_num2[l])
+        print(test_num4[l])
 
 
 
