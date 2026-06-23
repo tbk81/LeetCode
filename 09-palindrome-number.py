@@ -22,8 +22,15 @@ num = 121
 num2 = -121
 num3 = 10
 
+str_num = str(num3)
+rev_str_num = str_num[::-1]
+print(str_num)
+print(rev_str_num)
 
-
+if str_num == rev_str_num:
+    print("True")
+else:
+    print("False")
 
 
 
