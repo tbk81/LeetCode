@@ -17,7 +17,10 @@ li1 = ["flower", "flow", "flight"]
 li2 = ["dog", "racecar", "car"]
 
 
-
+for word in li1:
+    for l in word:
+        print(l)
+    print(word)
 
 
 
