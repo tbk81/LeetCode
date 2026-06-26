@@ -16,11 +16,13 @@ Explanation: There is no common prefix amongst the input strings.
 li1 = ["flower", "flow", "flight"]
 li2 = ["dog", "racecar", "car"]
 
-
+l = 0
 for word in li1:
-    for l in word:
-        print(l)
-    print(word)
+    while l < len(word):
+        print(word[l:l+2])
+        print(word[l:l+3])
+
+        l += 1
 
 
 
