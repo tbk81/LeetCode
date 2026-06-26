@@ -16,13 +16,11 @@ Explanation: There is no common prefix amongst the input strings.
 li1 = ["flower", "flow", "flight"]
 li2 = ["dog", "racecar", "car"]
 
-l = 0
-for word in li1:
-    while l < len(word):
-        print(word[l:l+2])
-        print(word[l:l+3])
+max_word = max(li1, key=len)
 
-        l += 1
+for i in range(len(max_word)-2):
+    print(max_word[0:i+2])
+
 
 
 
