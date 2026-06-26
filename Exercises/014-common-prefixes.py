@@ -18,8 +18,12 @@ li2 = ["dog", "racecar", "car"]
 
 max_word = max(li1, key=len)
 
+print(li1[2])
 for i in range(len(max_word)-2):
     print(max_word[0:i+2])
+    if max_word[0:i+2] in li1[2]:
+        print("TRUE")
+    # print(max_word[0:i+2])
 
 
 
