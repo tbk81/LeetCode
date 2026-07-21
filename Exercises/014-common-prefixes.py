@@ -48,6 +48,18 @@ print(longest_common_prefix(["flower", "flow", "flight"]))  # Output: "fl"
 print(longest_common_prefix(["dog", "racecar", "car"]))  # Output: ""
 
 
+# def longest_common_prefix(strs: list[str]) -> str:
+#     prefix = []
+#
+#     # zip(*strs) groups characters by index: ('f','f','f'), ('l','l','l'), ('o','o','i')
+#     for chars in zip(*strs):
+#         if len(set(chars)) == 1:  # Check if all characters in the group are identical
+#             prefix.append(chars[0])
+#         else:
+#             break
+#
+#     return "".join(prefix)
+
 
 
 
