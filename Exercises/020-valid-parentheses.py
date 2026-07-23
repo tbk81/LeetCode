@@ -28,11 +28,27 @@ Input: s = "([)]"
 Output: false
 """
 
-p1 = "()"
-p2 = "()[]{}"
-p3 = "(]"
-p4 = "([])"
-p5 = "([)]"
+def is_valid(s: str) -> bool:
+    # A stack to keep track of opening brackets
+    stack = []
+
+    # Map closing brackets to their corresponding opening brackets
+    matching_bracket = {")": "(", "}": "{", "]": "["}
+
+    for char in s:
+        if char in matching_bracket:
+            # If the character is a closing bracket, check the stack
+            top_element = stack.pop() if stack else "#"
+
+            # If the popped element doesn't match the corresponding opening bracket, it's invalid
+            if matching_bracket[char] != top_element:
+                return False
+        else:
+            # If it's an opening bracket, push it onto the stack
+            stack.append(char)
+
+    # If the stack is empty, all brackets were properly matched
+    return not stack
 
 
 
