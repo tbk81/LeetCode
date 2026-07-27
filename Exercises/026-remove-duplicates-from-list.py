@@ -25,8 +25,10 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 li1 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 seen = []
-
-for n in range(len(li1) - 1):
+print(li1[8])
+for n in range(len(li1)):
+    print(f"n= {n}")
+    print(f"num = {li1[n]}")
     if li1[n] in seen:
         li1.pop(n)
     else:
