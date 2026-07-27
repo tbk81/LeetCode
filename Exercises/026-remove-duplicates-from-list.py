@@ -23,16 +23,22 @@ and 4 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).
 """
 
-
-li1 = [1, 1, 2]
+li1 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 seen = []
 
-for n in range(len(li1)):
+for n in range(len(li1) - 1):
     if li1[n] in seen:
-        print(n)
         li1.pop(n)
     else:
-        seen.append(n)
+        seen.append(li1[n])
+
 print(li1)
 print(seen)
+
+
+
+
+
+
+
 
