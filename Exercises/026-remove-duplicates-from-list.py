@@ -31,10 +31,9 @@ for n in range(counter):
     print(counter)
     print(f"n = {n}")
     print(f"num = {li1[n]}")
-    counter -= 1
     if li1[n] in seen:
         li1.pop(n)
-        counter -= 1
+        counter = len(li1)
     else:
         seen.append(li1[n])
 
