@@ -25,20 +25,18 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 li1 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 seen = []
+final = []
 counter = len(li1)
-# print(li1[8])
 for n in range(counter):
-    print(counter)
-    print(f"n = {n}")
-    print(f"num = {li1[n]}")
-    if li1[n] in seen:
-        li1.pop(n)
-        counter = len(li1)
-    else:
+    if li1[n] not in seen:
         seen.append(li1[n])
-
+to_add = len(li1) - len(seen)
+k = len(seen)
+for i in range(to_add):
+    seen.append("_")
 print(li1)
 print(seen)
+print(k)
 
 
 
