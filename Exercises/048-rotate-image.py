@@ -24,31 +24,28 @@ Output: [[15,13,2,5],
         [16,7,10,11]]
 """
 
+# matrix1 = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+#     ]
+
 matrix1 = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-    ]
+    [5, 1, 9, 11],
+    [2, 4, 8, 10],
+    [13, 3, 6, 7],
+    [15, 14, 12, 16]
+]
 
-# print(matrix1[0][0])
-li1 = [matrix1[2][0], matrix1[1][0], matrix1[0][0]]
-li2 = [matrix1[2][1], matrix1[1][1], matrix1[0][1]]
-li3 = [matrix1[2][2], matrix1[1][2], matrix1[0][2]]
-# print(len(matrix1))
-# for l in matrix1:
-#     print(l)
-# print("\n")
-# print(li1)
-# print(li2)
-# print(li3)
+print(matrix1)
+n = len(matrix1)
+# Transpose matrix in-place
+for i in range(n):
+    for j in range(i + 1, n):
+        print(i, j)
+        matrix1[i][j], matrix1[j][i] = matrix1[j][i], matrix1[i][j]
 
-# for i in range(len(matrix1) - 1, -1, -1):
-#     for j in range(len(matrix1)):
-#         print(matrix1[i][j])
-    # print(matrix1[i][1])
-    # print(matrix1[i][2])
-for j in range(len(matrix1)):
-    for i in range(len(matrix1) - 1, -1, -1):
-        print(matrix1[i][j])
-# help(range)
-
+# Reverse each row in-place
+for i in range(n):
+    matrix1[i].reverse()
+print(matrix1)
