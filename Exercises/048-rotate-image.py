@@ -30,6 +30,25 @@ matrix1 = [
     [7, 8, 9]
     ]
 
+# print(matrix1[0][0])
+li1 = [matrix1[2][0], matrix1[1][0], matrix1[0][0]]
+li2 = [matrix1[2][1], matrix1[1][1], matrix1[0][1]]
+li3 = [matrix1[2][2], matrix1[1][2], matrix1[0][2]]
+# print(len(matrix1))
+# for l in matrix1:
+#     print(l)
+# print("\n")
+# print(li1)
+# print(li2)
+# print(li3)
 
-
+# for i in range(len(matrix1) - 1, -1, -1):
+#     for j in range(len(matrix1)):
+#         print(matrix1[i][j])
+    # print(matrix1[i][1])
+    # print(matrix1[i][2])
+for j in range(len(matrix1)):
+    for i in range(len(matrix1) - 1, -1, -1):
+        print(matrix1[i][j])
+# help(range)
 
