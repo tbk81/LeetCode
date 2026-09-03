@@ -16,5 +16,19 @@ Input: height = [1,1]
 Output: 1
 """
 
+import matplotlib.pyplot as plt
+import numpy as np
+
+height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
+
+# x = np.linspace(0, 2 * np.pi, 200)
+x = np.linspace(0, len(height))
+y = max(height)
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+plt.show()
+
+
 
 
